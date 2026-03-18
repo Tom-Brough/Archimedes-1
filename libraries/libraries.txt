@@ -1,0 +1,28 @@
+# Archimedes-1 | Required Arduino Libraries
+# ------------------------------------------
+# Install all of these via Arduino IDE > Tools > Manage Libraries
+# or via the Arduino CLI commands listed below.
+#
+# Arduino CLI install commands:
+#   arduino-cli lib install "Adafruit BME280 Library"@2.2.4
+#   arduino-cli lib install "Adafruit Unified Sensor"@1.1.15
+
+[libraries]
+
+name    = Adafruit BME280 Library
+version = 2.2.4
+source  = Arduino Library Manager
+url     = https://github.com/adafruit/Adafruit_BME280_Library
+used_by = sensors/bme280.h, sensors/bme280.cpp
+
+name    = Adafruit Unified Sensor
+version = 1.1.15
+source  = Arduino Library Manager
+url     = https://github.com/adafruit/Adafruit_Sensor
+used_by = sensors/bme280.h (dependency of BME280 library)
+
+[board]
+
+name    = XIAO_ESP32S3
+package = Seeed Studio ESP32 board package
+url     = https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
